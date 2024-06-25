@@ -1,10 +1,10 @@
 # Mi Proyecto Fullstack con Node.js y React
 
-Este proyecto es una aplicación fullstack que combina un backend desarrollado con Node.js y Express, y un frontend desarrollado con React y Vite. Proporciona una solución completa para [descripción breve del propósito del proyecto].
+Este proyecto es una aplicación fullstack que combina un backend desarrollado con Node.js y Express, y un frontend desarrollado con React y Vite. Proporciona una solución completa para la prueba de Evaluacion en UPA.
 
 ## Descripción
 
-Este proyecto tiene como objetivo [describe el propósito de tu proyecto aquí]. El backend está encargado de manejar [breve descripción del backend], mientras que el frontend ofrece una interfaz de usuario moderna para interactuar con la API.
+Este proyecto tiene como objetivo demostrar las habilidades. El backend está encargado de manejar todo el modelo y API, mientras que el frontend ofrece una interfaz de usuario moderna para interactuar con la API.
 
 ## Tecnologías Utilizadas
 
