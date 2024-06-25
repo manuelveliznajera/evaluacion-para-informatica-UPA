@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="./css/registrar.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+          <a href="/">
+            <img src="/img/logo-upa.png" alt="Logo" class="logo" />
+          </a>
+        </div>
+        <div class="navbar-links">
+          <a href="/" class="nav-link">Inicio</a>
+          <a href="/Reportes.html" class="nav-link">Reportes</a>
+        </div>
+      </nav>
+    <form  >
+        <h2>Registro</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text"  name="nombre" 
+         
+         />
+
+
+        <label htmlFor="telefono">Teléfono:</label>
+        <input type="tel"  name="telefono"
+        
+        />
+       
+
+        <label htmlFor="correo">Email:</label>
+        <input type="email"  name="correo"
+       
+        />
+        
+
+        <label htmlFor="fecha">Fecha de Nacimiento:</label>
+        <input type="date" name='fecha' 
+        
+        />
+      
+        <label htmlFor="age">Edad:</label>
+        <input type="number" name="age" 
+         
+          readOnly
+        />
+        <button type="button" onclick="capturaDatos()">Enviar</button>
+
+    </form>
+<script src="./js/Registrar.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "evaluacion-manuel-veliz",
+  "version": "1.0.0",
+  "scripts": {
+    "start:backend": "cd back && npm start",
+    "start:frontend": "cd front && npm start",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

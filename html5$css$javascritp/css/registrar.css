@@ -1,0 +1,82 @@
+  /* css del formulario */
+  :root {
+    
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+   
+  }
+
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .navbar{
+    width: 100%;
+    padding: 5%;
+    padding-left: 20%;
+  }
+  .form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #a6a3a3;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #327e05;
+    outline: none;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #327e05;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 5px;
+  }
+  
+  button:hover {
+    background-color: #5cbf22;
+  }
+  .error{
+    margin: 0;
+    padding: 4px;
+    background-color: red;
+  }

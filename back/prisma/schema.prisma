@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:2301924671712@localhost:3306/evaluacion-ManuelVeliz"
+}
+
+model EstadoUsuario {
+  id      Int       @id @default(autoincrement())
+  titulo  String    @db.VarChar(255)
+  clave   String    @db.VarChar(150)
+  Usuario Usuario[]
+}
+
+model Usuario {
+  id              Int           @id @default(autoincrement())
+  nombre          String        @db.VarChar(255)
+  fecha           DateTime      @db.Date
+  telefono        String        @db.VarChar(20) 
+  correo          String        @db.VarChar(255) @unique
+  creacion        DateTime       @db.DateTime()
+  EstadoUsuarioId Int           @default(1)
+  EstadoUsuario   EstadoUsuario @relation(fields: [EstadoUsuarioId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Usuario_ibfk_1")
+
+  @@index([EstadoUsuarioId], map: "EstadoUsuarioId")
+}
