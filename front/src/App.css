@@ -121,6 +121,7 @@ button:hover {
   margin: 0;
   padding: 4px;
   background-color: red;
+  color: white;
 }
 
 /* diseño de la tabla */

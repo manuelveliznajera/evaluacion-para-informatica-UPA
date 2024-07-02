@@ -25,6 +25,9 @@ export const HomePage = () => {
             <Link className='btn' to='/Reportes' >
             Reportes
             </Link>
+            <Link className='btn' to='/ingresar_punteo' >
+            Ingresar Punteo
+            </Link>
         </div>
         <p>
           Todos los derechos Reservados @2024 Ing. Manuel Veliz
