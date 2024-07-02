@@ -4,25 +4,36 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = "mysql://root:2301924671712@localhost:3306/evaluacion-ManuelVeliz"
+  url      = "mysql://root:MA2pass0C=D$woordF5S!rR+9**.@localhost:3306/prueba_manuelveliz"
 }
 
-model EstadoUsuario {
+model estadousuario {
   id      Int       @id @default(autoincrement())
   titulo  String    @db.VarChar(255)
   clave   String    @db.VarChar(150)
-  Usuario Usuario[]
+  usuario usuario[]
 }
 
-model Usuario {
-  id              Int           @id @default(autoincrement())
-  nombre          String        @db.VarChar(255)
-  fecha           DateTime      @db.Date
-  telefono        String        @db.VarChar(20) 
-  correo          String        @db.VarChar(255) @unique
-  creacion        DateTime       @db.DateTime()
-  EstadoUsuarioId Int           @default(1)
-  EstadoUsuario   EstadoUsuario @relation(fields: [EstadoUsuarioId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "Usuario_ibfk_1")
+model punteo_usuario {
+  id        Int      @id @default(autoincrement())
+  usuarioId Int
+  punteo    Float?   @db.Float
+  createdAt DateTime @default(now()) @db.Timestamp(0)
+  usuario   usuario  @relation(fields: [usuarioId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "punteo_usuario_ibfk_1")
+
+  @@index([usuarioId], map: "usuarioId")
+}
+
+model usuario {
+  id              Int              @id @default(autoincrement())
+  nombre          String           @db.VarChar(255)
+  fecha           DateTime         @db.Date
+  telefono        String           @db.VarChar(20)
+  correo          String           @db.VarChar(255)
+  creacion        DateTime         @default(now()) @db.Timestamp(0)
+  EstadoUsuarioId Int
+  punteo_usuario  punteo_usuario[]
+  estadousuario   estadousuario    @relation(fields: [EstadoUsuarioId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "usuario_ibfk_1")
 
   @@index([EstadoUsuarioId], map: "EstadoUsuarioId")
 }
