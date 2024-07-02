@@ -16,6 +16,15 @@ CREATE TABLE Usuario (
     FOREIGN KEY (EstadoUsuarioId) REFERENCES EstadoUsuario(id)
 );
 
+CREATE TABLE punteo_usuario(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    usuarioId INT NOT NULL,
+    punteo float(2),
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    
+    FOREIGN KEY (usuarioId) REFERENCES Usuario(id)
+);
+
 INSERT INTO EstadoUsuario (titulo, clave)
 VALUES 
 ('Activo', 'activo'), 
